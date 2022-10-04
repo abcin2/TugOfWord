@@ -14,6 +14,7 @@
 		33B2FC8A28CE460B00CB447B /* Tug_of_WordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FC8928CE460B00CB447B /* Tug_of_WordTests.swift */; };
 		33B2FC9428CE460B00CB447B /* Tug_of_WordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FC9328CE460B00CB447B /* Tug_of_WordUITests.swift */; };
 		33B2FC9628CE460B00CB447B /* Tug_of_WordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FC9528CE460B00CB447B /* Tug_of_WordUITestsLaunchTests.swift */; };
+		33B2FCA328CE46EE00CB447B /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FCA228CE46EE00CB447B /* StartScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		33B2FC8F28CE460B00CB447B /* Tug-of-WordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tug-of-WordUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B2FC9328CE460B00CB447B /* Tug_of_WordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tug_of_WordUITests.swift; sourceTree = "<group>"; };
 		33B2FC9528CE460B00CB447B /* Tug_of_WordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tug_of_WordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		33B2FCA228CE46EE00CB447B /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				33B2FC7828CE460A00CB447B /* Tug_of_WordApp.swift */,
 				33B2FC7A28CE460A00CB447B /* ContentView.swift */,
+				33B2FCA228CE46EE00CB447B /* StartScreen.swift */,
 				33B2FC7C28CE460A00CB447B /* Assets.xcassets */,
 				33B2FC7E28CE460A00CB447B /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				33B2FC7B28CE460A00CB447B /* ContentView.swift in Sources */,
 				33B2FC7928CE460A00CB447B /* Tug_of_WordApp.swift in Sources */,
+				33B2FCA328CE46EE00CB447B /* StartScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
