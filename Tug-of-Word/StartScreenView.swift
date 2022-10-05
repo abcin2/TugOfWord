@@ -13,7 +13,7 @@ struct StartScreenView: View {
             VStack {
                 Spacer()
                 Text("Tug-of-Word").font(.title).padding()
-                Text("Beta Version 1.0.0")
+                Text("Beta Version 1.0")
                 Spacer()
                 VStack {
                     NavigationLink(destination: AllGamesView()) {
