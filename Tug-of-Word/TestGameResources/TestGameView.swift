@@ -9,7 +9,11 @@ import SwiftUI
 
 struct TestGameView: View {
     var body: some View {
-        Text("Test Game")
+        VStack {
+            Text("Test Game").font(.title)
+            Text("3 letter words").font(.subheadline)
+            Spacer()
+        }
     }
 }
 
