@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33811BE328EDCE0E007582AF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33811BE228EDCE0E007582AF /* SettingsView.swift */; };
+		33811BE528EDCE28007582AF /* AllGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33811BE428EDCE28007582AF /* AllGamesView.swift */; };
+		33811BE728EE2CC9007582AF /* TestGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33811BE628EE2CC9007582AF /* TestGameView.swift */; };
 		33B2FC7928CE460A00CB447B /* Tug_of_WordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FC7828CE460A00CB447B /* Tug_of_WordApp.swift */; };
 		33B2FC7B28CE460A00CB447B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FC7A28CE460A00CB447B /* ContentView.swift */; };
 		33B2FC7D28CE460A00CB447B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33B2FC7C28CE460A00CB447B /* Assets.xcassets */; };
@@ -14,7 +17,7 @@
 		33B2FC8A28CE460B00CB447B /* Tug_of_WordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FC8928CE460B00CB447B /* Tug_of_WordTests.swift */; };
 		33B2FC9428CE460B00CB447B /* Tug_of_WordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FC9328CE460B00CB447B /* Tug_of_WordUITests.swift */; };
 		33B2FC9628CE460B00CB447B /* Tug_of_WordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FC9528CE460B00CB447B /* Tug_of_WordUITestsLaunchTests.swift */; };
-		33B2FCA328CE46EE00CB447B /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FCA228CE46EE00CB447B /* StartScreen.swift */; };
+		33B2FCA328CE46EE00CB447B /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B2FCA228CE46EE00CB447B /* StartScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33811BE228EDCE0E007582AF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		33811BE428EDCE28007582AF /* AllGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesView.swift; sourceTree = "<group>"; };
+		33811BE628EE2CC9007582AF /* TestGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGameView.swift; sourceTree = "<group>"; };
 		33B2FC7528CE460A00CB447B /* Tug-of-Word.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tug-of-Word.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B2FC7828CE460A00CB447B /* Tug_of_WordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tug_of_WordApp.swift; sourceTree = "<group>"; };
 		33B2FC7A28CE460A00CB447B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,7 +51,7 @@
 		33B2FC8F28CE460B00CB447B /* Tug-of-WordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tug-of-WordUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B2FC9328CE460B00CB447B /* Tug_of_WordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tug_of_WordUITests.swift; sourceTree = "<group>"; };
 		33B2FC9528CE460B00CB447B /* Tug_of_WordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tug_of_WordUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		33B2FCA228CE46EE00CB447B /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
+		33B2FCA228CE46EE00CB447B /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +104,10 @@
 			children = (
 				33B2FC7828CE460A00CB447B /* Tug_of_WordApp.swift */,
 				33B2FC7A28CE460A00CB447B /* ContentView.swift */,
-				33B2FCA228CE46EE00CB447B /* StartScreen.swift */,
+				33B2FCA228CE46EE00CB447B /* StartScreenView.swift */,
+				33811BE228EDCE0E007582AF /* SettingsView.swift */,
+				33811BE428EDCE28007582AF /* AllGamesView.swift */,
+				33811BE628EE2CC9007582AF /* TestGameView.swift */,
 				33B2FC7C28CE460A00CB447B /* Assets.xcassets */,
 				33B2FC7E28CE460A00CB447B /* Preview Content */,
 			);
@@ -261,8 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				33B2FC7B28CE460A00CB447B /* ContentView.swift in Sources */,
+				33811BE328EDCE0E007582AF /* SettingsView.swift in Sources */,
+				33811BE728EE2CC9007582AF /* TestGameView.swift in Sources */,
+				33811BE528EDCE28007582AF /* AllGamesView.swift in Sources */,
 				33B2FC7928CE460A00CB447B /* Tug_of_WordApp.swift in Sources */,
-				33B2FCA328CE46EE00CB447B /* StartScreen.swift in Sources */,
+				33B2FCA328CE46EE00CB447B /* StartScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
