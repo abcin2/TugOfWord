@@ -9,16 +9,14 @@ import SwiftUI
 
 struct AllGamesView: View {
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("All Games")
-                List {
-                    NavigationLink(destination: TestGameView()) {
-                        Text("Test Game")
-                    }
+        VStack {
+            Text("All Games")
+            List {
+                NavigationLink(destination: TestGameView()) {
+                    Text("Test Game")
                 }
             }
-        }.navigationTitle("All Games")
+        }
     }
 }
 
