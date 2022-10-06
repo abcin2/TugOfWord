@@ -12,7 +12,7 @@ struct AllGamesView: View {
         VStack {
             Text("All Games")
             List {
-                NavigationLink(destination: TestGameView()) {
+                NavigationLink(destination: TestGameView(data: TestGameData())) {
                     Text("Test Game")
                 }
             }
