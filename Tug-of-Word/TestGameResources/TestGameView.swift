@@ -9,6 +9,8 @@ import SwiftUI
 
 class TestGameData: ObservableObject {
     
+    //let allWords: [String] = Array(wordsInCurrentGame.keys)
+    
     @Published var wordsInCurrentGame = [
         "CAT": 0,
         "BAT": 1,
@@ -19,27 +21,26 @@ class TestGameData: ObservableObject {
         "SUM": -1,
     ]
     
-    @Published var allWords = [
-        "test",
-        "testing",
-        "tester",
-        "tested"
-    ]
-    
     @Published var counter: Int = 0
     
     func nextWord() {
-        if counter < allWords.count - 1 {
+        if counter < wordsInCurrentGame.count - 1 {
             counter += 1
         } else {
             counter = 0
         }
     }
     
+//    init(allWords: [String]) {
+//        self.allWords = Array(wordsInCurrentGame.keys)
+//    }
+
+    
 }
 
 struct TestGameView: View {
     @ObservedObject var data: TestGameData
+    let allWords: [String] = Array(data.wordsInCurrentGame.keys)
     
     var body: some View {
         VStack {
@@ -54,8 +55,8 @@ struct TestGameView: View {
     }
 }
 
-struct TestGameView_Previews: PreviewProvider {
-    static var previews: some View {
-        TestGameView(data: TestGameData())
-    }
-}
+//struct TestGameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TestGameView(data: TestGameData())
+//    }
+//}
