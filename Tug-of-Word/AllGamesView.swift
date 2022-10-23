@@ -15,6 +15,9 @@ struct AllGamesView: View {
                 NavigationLink(destination: TestGameView(data: TestGameData())) {
                     Text("Test Game")
                 }
+                Text("Timed")
+                Text("Infinite")
+                Text("Battle")
             }
         }
     }

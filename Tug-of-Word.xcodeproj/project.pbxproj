@@ -37,7 +37,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		333B38582905DBF200517184 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		333B38522905DBF200517184 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		333B38542905DBF200517184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33811BE228EDCE0E007582AF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		33811BE428EDCE28007582AF /* AllGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesView.swift; sourceTree = "<group>"; };
 		33811BE628EE2CC9007582AF /* TestGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGameView.swift; sourceTree = "<group>"; };
@@ -79,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		333B38512905DBF200517184 /* Game Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				333B38522905DBF200517184 /* KeyboardViewController.swift */,
+				333B38542905DBF200517184 /* Info.plist */,
+			);
+			path = "Game Keyboard";
+			sourceTree = "<group>";
+		};
 		33811BE828EE2E41007582AF /* TestGameResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +117,7 @@
 				33B2FC7728CE460A00CB447B /* Tug-of-Word */,
 				33B2FC8828CE460B00CB447B /* Tug-of-WordTests */,
 				33B2FC9228CE460B00CB447B /* Tug-of-WordUITests */,
+				333B38512905DBF200517184 /* Game Keyboard */,
 				33B2FC7628CE460A00CB447B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -157,6 +182,7 @@
 				33B2FC7128CE460A00CB447B /* Sources */,
 				33B2FC7228CE460A00CB447B /* Frameworks */,
 				33B2FC7328CE460A00CB447B /* Resources */,
+				333B38582905DBF200517184 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -436,6 +462,7 @@
 		33B2FC9A28CE460B00CB447B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +491,7 @@
 		33B2FC9B28CE460B00CB447B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
