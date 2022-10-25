@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class TestGameData: ObservableObject {
+class TestGameViewModel: ObservableObject {
     
     struct WordsInGame: Identifiable {
         let word: String
@@ -65,11 +65,21 @@ class TestGameData: ObservableObject {
     
     @Published var timeRemaining = 30
     @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    // for keyboard
+    
+    func enterLetter() {
+        return
+    }
+    
+    func removeLetter() {
+        return
+    }
 
 }
 
 struct TestGameView: View {
-    @ObservedObject var data: TestGameData
+    @ObservedObject var data: TestGameViewModel
     @FocusState var textFieldInFocus: Bool
     
     var body: some View {
