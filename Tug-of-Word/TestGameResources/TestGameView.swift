@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class TestGameViewModel: ObservableObject {
+class GameViewModel: ObservableObject {
     
     struct WordsInGame: Identifiable {
         let word: String
@@ -83,7 +83,7 @@ class TestGameViewModel: ObservableObject {
 }
 
 struct TestGameView: View {
-    @StateObject var data: TestGameViewModel = TestGameViewModel()
+    @StateObject var data: GameViewModel = GameViewModel()
     @FocusState var textFieldInFocus: Bool
     
     var body: some View {
@@ -128,6 +128,7 @@ struct TestGameView: View {
                     }
                     .autocorrectionDisabled(true)
                     .autocapitalization(.allCharacters)
+                    .disabled(true)
                 Spacer()
             }
             Button("Reset") {
@@ -156,6 +157,6 @@ struct TestGameView: View {
 
 struct TestGameView_Previews: PreviewProvider {
     static var previews: some View {
-        TestGameView(data: TestGameViewModel())
+        TestGameView(data: GameViewModel())
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct KeyboardView: View {
-    @EnvironmentObject var data: TestGameViewModel
+    @EnvironmentObject var data: GameViewModel
     @State var isTapped: Bool = false // might not need
     var firstRowKeys: [String] = "QWERTYUIOP".map{ String($0) }
     var secondRowKeys: [String] = "ASDFGHJKL".map{ String($0) }
@@ -18,18 +18,18 @@ struct KeyboardView: View {
         VStack {
             HStack(spacing: 2) {
                 ForEach(firstRowKeys, id: \.self) { letter in
-                    LetterButtonView(letter: letter, isTapped: isTapped)
+                    LetterButtonView(letter: letter)
                 }
             }
             HStack(spacing: 2) {
                 ForEach(secondRowKeys, id: \.self) { letter in
-                    LetterButtonView(letter: letter, isTapped: isTapped)
+                    LetterButtonView(letter: letter)
                 }
             }
             HStack(spacing: 2) {
                 Spacer()
                 ForEach(thirdRowKeys, id: \.self) { letter in
-                    LetterButtonView(letter: letter, isTapped: isTapped)
+                    LetterButtonView(letter: letter)
                 }
                 Button {
                     data.removeLetter()
