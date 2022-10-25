@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct LetterButtonView: View {
-    @ObservedObject var data = TestGameViewModel()
+    @EnvironmentObject var data: TestGameViewModel
     var letter: String
     var isTapped: Bool
     
     var body: some View {
         Button {
-            data.enterLetter()
+            data.enterLetter(letter)
         } label: {
             Text(letter)
                 .font(.system(size: 20))

@@ -68,18 +68,22 @@ class TestGameViewModel: ObservableObject {
     
     // for keyboard
     
-    func enterLetter() {
-        return
+    func enterLetter(_ letter: String) {
+        guessedWord += letter
+        print(guessedWord)
     }
     
     func removeLetter() {
-        return
+        if guessedWord.count > 0 {
+            guessedWord.removeLast()
+            print(guessedWord)
+        }
     }
 
 }
 
 struct TestGameView: View {
-    @ObservedObject var data: TestGameViewModel
+    @StateObject var data: TestGameViewModel = TestGameViewModel()
     @FocusState var textFieldInFocus: Bool
     
     var body: some View {
@@ -124,17 +128,21 @@ struct TestGameView: View {
                     }
                     .autocorrectionDisabled(true)
                     .autocapitalization(.allCharacters)
-                // eventually will change the above to a custom keyboard - somehow
                 Spacer()
             }
             Button("Reset") {
                 // probably would do some good to add another alert here
                 data.counter = 0
                 data.showAlert = false
+                data.timeRemaining = 30
+                data.guessedWord = ""
+                data.timerStopped = false
             }
             Spacer()
             Spacer()
-            Spacer()
+            KeyboardView()
+                .scaleEffect(Global.keyboardScale)
+                .padding(.bottom, 40)
         }
         .alert("Congratulations! You have completed the level! You have been awarded \(data.timeRemaining * 5) points!", isPresented: $data.showAlert) {
             Button("OK", role: .cancel) {}
@@ -142,11 +150,12 @@ struct TestGameView: View {
         .onReceive(data.timer) { time in
             data.startTimer()
         }
+        .environmentObject(data)
     }
 }
 
-//struct TestGameView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TestGameView(data: TestGameData())
-//    }
-//}
+struct TestGameView_Previews: PreviewProvider {
+    static var previews: some View {
+        TestGameView(data: TestGameViewModel())
+    }
+}
