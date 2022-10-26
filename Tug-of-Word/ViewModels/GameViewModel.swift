@@ -30,9 +30,19 @@ class GameViewModel: ObservableObject {
     
     @Published var guessedWord: String = ""
     
-    @Published var showAlert: Bool = false
+    @Published var showWinAlert: Bool = false
+    
+    @Published var showResetAlert: Bool = false
+    
+    @Published var showLoseAlert: Bool = false
     
     @Published var timerStopped: Bool = false
+    
+    @Published var timeRemaining = 30
+    
+    @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    @Published var sandboxMode: Bool = false
     
     func nextWord() {
         
@@ -51,28 +61,46 @@ class GameViewModel: ObservableObject {
         } else {
             print("end of game")
             guessedWord = ""
-            showAlert = true
+            showWinAlert = true
             timerStopped = true
-            // need to find a way to stop the timer when the game is over
         }
     }
     
     func startTimer() {
         if timeRemaining > 0 && timerStopped == false {
             timeRemaining -= 1
+        } else if sandboxMode == true {
+            timerStopped = true
+        } else {
+            showLoseAlert = true
+            timerStopped = true
         }
     }
     
+    func sandboxPlay() {
+        showLoseAlert = false
+        sandboxMode = true // this doesn't change anything atm, but it could eventually be used to display different winning screen
+    }
+    
     func reset() {
+        showWinAlert = false
+        showResetAlert = true
+        timerStopped = true
+    }
+    
+    func resetConfirm() {
+        showResetAlert = false
         counter = 0
-        showAlert = false
         timeRemaining = 30
         guessedWord = ""
         timerStopped = false
+        sandboxMode = false
     }
     
-    @Published var timeRemaining = 30
-    @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    func resetDeny() {
+        showResetAlert = false
+        timerStopped = false
+    }
     
     // for keyboard
     

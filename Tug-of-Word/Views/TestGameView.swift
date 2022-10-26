@@ -42,6 +42,7 @@ struct TestGameView: View {
                     .frame(width: 250.0)
                     .textFieldStyle(.roundedBorder)
                     .textCase(.uppercase)
+                    .multilineTextAlignment(.center)
                     .onChange(of: data.guessedWord) { newValue in
                         data.nextWord()
                     }
@@ -57,8 +58,15 @@ struct TestGameView: View {
                 Spacer()
             }
             Button("Reset") {
-                // probably would do some good to add another alert here
                 data.reset()
+            }
+            .alert("Are you sure you would like to restart this game?", isPresented: $data.showResetAlert) {
+                Button("NO", role: .cancel) {
+                    data.resetDeny()
+                }
+                Button("YES", role: .destructive) {
+                    data.resetConfirm()
+                }
             }
             Spacer()
             Spacer()
@@ -66,8 +74,16 @@ struct TestGameView: View {
                 .scaleEffect(Global.keyboardScale)
                 .padding(.bottom, 40)
         }
-        .alert("Congratulations! You have completed the level!", isPresented: $data.showAlert) {
+        .alert("Congratulations! You have completed the level!", isPresented: $data.showWinAlert) {
             Button("OK", role: .cancel) {}
+        }
+        .alert("Oh no! You didn't complete the level in time. Restart?", isPresented: $data.showLoseAlert) {
+            Button("OK", role: .destructive) {
+                data.resetConfirm()
+            }
+            Button("Keep playing", role: .cancel) {
+                data.sandboxPlay()
+            }
         }
         .onReceive(data.timer) { time in
             data.startTimer()
