@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333B385E2907FF6D00517184 /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B385D2907FF6D00517184 /* LetterButtonView.swift */; };
+		333B38602908369300517184 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B385F2908369300517184 /* KeyboardView.swift */; };
+		333B386329083D9800517184 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B386229083D9800517184 /* Global.swift */; };
+		333B38662908CEA100517184 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B38652908CEA100517184 /* GameViewModel.swift */; };
 		33811BE328EDCE0E007582AF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33811BE228EDCE0E007582AF /* SettingsView.swift */; };
 		33811BE528EDCE28007582AF /* AllGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33811BE428EDCE28007582AF /* AllGamesView.swift */; };
 		33811BE728EE2CC9007582AF /* TestGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33811BE628EE2CC9007582AF /* TestGameView.swift */; };
@@ -51,8 +55,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		333B38522905DBF200517184 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		333B38542905DBF200517184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333B385D2907FF6D00517184 /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
+		333B385F2908369300517184 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		333B386229083D9800517184 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		333B38652908CEA100517184 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		33811BE228EDCE0E007582AF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		33811BE428EDCE28007582AF /* AllGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesView.swift; sourceTree = "<group>"; };
 		33811BE628EE2CC9007582AF /* TestGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGameView.swift; sourceTree = "<group>"; };
@@ -94,21 +100,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		333B38512905DBF200517184 /* Game Keyboard */ = {
+		333B385C2907FF5F00517184 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				333B38522905DBF200517184 /* KeyboardViewController.swift */,
-				333B38542905DBF200517184 /* Info.plist */,
-			);
-			path = "Game Keyboard";
-			sourceTree = "<group>";
-		};
-		33811BE828EE2E41007582AF /* TestGameResources */ = {
-			isa = PBXGroup;
-			children = (
+				33B2FCA228CE46EE00CB447B /* StartScreenView.swift */,
+				33811BE228EDCE0E007582AF /* SettingsView.swift */,
+				33811BE428EDCE28007582AF /* AllGamesView.swift */,
+				333B385D2907FF6D00517184 /* LetterButtonView.swift */,
+				333B385F2908369300517184 /* KeyboardView.swift */,
 				33811BE628EE2CC9007582AF /* TestGameView.swift */,
 			);
-			path = TestGameResources;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		333B386129083D8600517184 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				333B386229083D9800517184 /* Global.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		333B38642908CE8900517184 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				333B38652908CEA100517184 /* GameViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		33B2FC6C28CE460A00CB447B = {
@@ -117,7 +135,6 @@
 				33B2FC7728CE460A00CB447B /* Tug-of-Word */,
 				33B2FC8828CE460B00CB447B /* Tug-of-WordTests */,
 				33B2FC9228CE460B00CB447B /* Tug-of-WordUITests */,
-				333B38512905DBF200517184 /* Game Keyboard */,
 				33B2FC7628CE460A00CB447B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,12 +152,11 @@
 		33B2FC7728CE460A00CB447B /* Tug-of-Word */ = {
 			isa = PBXGroup;
 			children = (
-				33811BE828EE2E41007582AF /* TestGameResources */,
+				333B38642908CE8900517184 /* ViewModels */,
+				333B386129083D8600517184 /* Models */,
+				333B385C2907FF5F00517184 /* Views */,
 				33B2FC7828CE460A00CB447B /* Tug_of_WordApp.swift */,
 				33B2FC7A28CE460A00CB447B /* ContentView.swift */,
-				33B2FCA228CE46EE00CB447B /* StartScreenView.swift */,
-				33811BE228EDCE0E007582AF /* SettingsView.swift */,
-				33811BE428EDCE28007582AF /* AllGamesView.swift */,
 				33B2FC7C28CE460A00CB447B /* Assets.xcassets */,
 				33B2FC7E28CE460A00CB447B /* Preview Content */,
 			);
@@ -303,12 +319,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				333B385E2907FF6D00517184 /* LetterButtonView.swift in Sources */,
+				333B38602908369300517184 /* KeyboardView.swift in Sources */,
 				33B2FC7B28CE460A00CB447B /* ContentView.swift in Sources */,
 				33811BE328EDCE0E007582AF /* SettingsView.swift in Sources */,
 				33811BE728EE2CC9007582AF /* TestGameView.swift in Sources */,
 				33811BE528EDCE28007582AF /* AllGamesView.swift in Sources */,
 				33B2FC7928CE460A00CB447B /* Tug_of_WordApp.swift in Sources */,
 				33B2FCA328CE46EE00CB447B /* StartScreenView.swift in Sources */,
+				333B38662908CEA100517184 /* GameViewModel.swift in Sources */,
+				333B386329083D9800517184 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tug-of-Word/Preview Content\"";
+				DEVELOPMENT_TEAM = 65PP5AV236;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -497,6 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tug-of-Word/Preview Content\"";
+				DEVELOPMENT_TEAM = 65PP5AV236;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
