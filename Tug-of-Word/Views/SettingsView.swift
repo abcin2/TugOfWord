@@ -9,7 +9,12 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text("Settings")
+        NavigationView {
+            List {
+                // keyboard color - could use enum for this
+            }
+        }
+        .navigationTitle("Settings")
     }
 }
 

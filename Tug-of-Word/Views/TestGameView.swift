@@ -57,6 +57,7 @@ struct TestGameView: View {
                     .disabled(true)
                 Spacer()
             }
+            .padding(.bottom)
             Button("Reset") {
                 data.reset()
             }
