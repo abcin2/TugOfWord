@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct KeyboardView: View {
-    @ObservedObject var gameViewModelData: GameViewModel = GameViewModel()
+    @EnvironmentObject var gameViewModelData: GameViewModel
     @EnvironmentObject var settingsViewModelData: SettingsViewModel
     var firstRowKeys: [String] = "QWERTYUIOP".map{ String($0) }
     var secondRowKeys: [String] = "ASDFGHJKL".map{ String($0) }
