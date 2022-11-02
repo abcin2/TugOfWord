@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct LetterButtonView: View {
-    @EnvironmentObject var data: GameViewModel
+    @EnvironmentObject var gameViewModelData: GameViewModel
+    @EnvironmentObject var settingsViewModelData: SettingsViewModel
     var letter: String
     
     var body: some View {
         Button {
-            data.enterLetter(letter)
+            gameViewModelData.enterLetter(letter)
         } label: {
             Text(letter)
                 .font(.system(size: 20))
                 .frame(width: 35, height: 50)
-                .background(Color(hue: 0.574, saturation: 0.682, brightness: 1.0))
-                .foregroundColor(.primary)
+                .background(KeyboardTheme(theme: settingsViewModelData.keyboardTheme).keyColor)
+                .foregroundColor(KeyboardTheme(theme: settingsViewModelData.keyboardTheme).charColor)
         }
         .cornerRadius(10)
     }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct KeyboardView: View {
-    @EnvironmentObject var data: GameViewModel
-    @State var isTapped: Bool = false // might not need
+    @EnvironmentObject var gameViewModelData: GameViewModel
+    @EnvironmentObject var settingsViewModelData: SettingsViewModel
     var firstRowKeys: [String] = "QWERTYUIOP".map{ String($0) }
     var secondRowKeys: [String] = "ASDFGHJKL".map{ String($0) }
     var thirdRowKeys: [String] = "ZXCVBNM".map{ String($0) }
@@ -32,13 +32,13 @@ struct KeyboardView: View {
                     LetterButtonView(letter: letter)
                 }
                 Button {
-                    data.removeLetter()
+                    gameViewModelData.removeLetter()
                 } label: {
                     Image(systemName: "delete.backward.fill")
                         .font(.system(size: 20, weight: .heavy))
                         .frame(width: 40, height: 50)
-                        .background(isTapped ? Color(hue: 0.574, saturation: 1, brightness: 1.0) : Color(hue: 0.574, saturation: 0.682, brightness: 1.0))
-                        .foregroundColor(.primary)
+                        .background(KeyboardTheme(theme: settingsViewModelData.keyboardTheme).keyColor)
+                        .foregroundColor(KeyboardTheme(theme: settingsViewModelData.keyboardTheme).charColor)
                 }
                 .cornerRadius(10)
                 .padding(.leading, 10)

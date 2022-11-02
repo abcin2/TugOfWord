@@ -11,6 +11,8 @@
 		333B38602908369300517184 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B385F2908369300517184 /* KeyboardView.swift */; };
 		333B386329083D9800517184 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B386229083D9800517184 /* Global.swift */; };
 		333B38662908CEA100517184 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B38652908CEA100517184 /* GameViewModel.swift */; };
+		333B3868290AA00600517184 /* KeyboardThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B3867290AA00600517184 /* KeyboardThemeModel.swift */; };
+		333B386A2910247A00517184 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B38692910247A00517184 /* SettingsViewModel.swift */; };
 		33811BE328EDCE0E007582AF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33811BE228EDCE0E007582AF /* SettingsView.swift */; };
 		33811BE528EDCE28007582AF /* AllGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33811BE428EDCE28007582AF /* AllGamesView.swift */; };
 		33811BE728EE2CC9007582AF /* TestGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33811BE628EE2CC9007582AF /* TestGameView.swift */; };
@@ -59,6 +61,8 @@
 		333B385F2908369300517184 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		333B386229083D9800517184 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		333B38652908CEA100517184 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		333B3867290AA00600517184 /* KeyboardThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardThemeModel.swift; sourceTree = "<group>"; };
+		333B38692910247A00517184 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		33811BE228EDCE0E007582AF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		33811BE428EDCE28007582AF /* AllGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesView.swift; sourceTree = "<group>"; };
 		33811BE628EE2CC9007582AF /* TestGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGameView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		333B386129083D8600517184 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				333B3867290AA00600517184 /* KeyboardThemeModel.swift */,
 				333B386229083D9800517184 /* Global.swift */,
 			);
 			path = Models;
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				333B38652908CEA100517184 /* GameViewModel.swift */,
+				333B38692910247A00517184 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -327,8 +333,10 @@
 				33811BE528EDCE28007582AF /* AllGamesView.swift in Sources */,
 				33B2FC7928CE460A00CB447B /* Tug_of_WordApp.swift in Sources */,
 				33B2FCA328CE46EE00CB447B /* StartScreenView.swift in Sources */,
+				333B3868290AA00600517184 /* KeyboardThemeModel.swift in Sources */,
 				333B38662908CEA100517184 /* GameViewModel.swift in Sources */,
 				333B386329083D9800517184 /* Global.swift in Sources */,
+				333B386A2910247A00517184 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
