@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct StartScreenView: View {
+    @StateObject var settings = SettingsViewModel()
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -26,6 +28,7 @@ struct StartScreenView: View {
                 Spacer()
             }.padding()
         }
+        .environmentObject(settings)
     }
 }
 

@@ -14,22 +14,21 @@ struct TestGameView: View {
     var body: some View {
         VStack {
             HStack {
-                Spacer()
-                Spacer()
-                Text("Test Game").font(.title)
-                Spacer()
-                Text("Timer")
-                    .padding()
+                /// used for even spacing for header elements
+                VStack {}.frame(maxWidth: .infinity, alignment: .leading)
+                VStack {
+                    Text("Test Game").font(.title)
+                    Text("3 letter words").font(.subheadline)
+                }
+                .frame(minWidth: 200, alignment: .center)
+                VStack {
+                    Text("Timer")
+                    Text("\(data.timeRemaining)")
+                        .font(.subheadline)
+                }
+                .frame(maxWidth: .infinity, maxHeight: 75, alignment: .topTrailing)
             }
-            HStack {
-                Spacer()
-                Spacer()
-                Text("3 letter words").font(.subheadline)
-                Spacer()
-                Text("\(data.timeRemaining)")
-                    .font(.subheadline)
-                Spacer()
-            }
+            .padding()
             Spacer()
             Text(data.wordsInCurrentGame[data.counter].word)
                 .font(.title)
@@ -95,6 +94,6 @@ struct TestGameView: View {
 
 struct TestGameView_Previews: PreviewProvider {
     static var previews: some View {
-        TestGameView(data: GameViewModel())
+        TestGameView()
     }
 }
