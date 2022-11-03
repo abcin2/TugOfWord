@@ -15,7 +15,12 @@ struct TestGameView: View {
         VStack {
             HStack {
                 /// used for even spacing for header elements
-                VStack {}.frame(maxWidth: .infinity, alignment: .leading)
+                VStack {
+                    Button("End Game") {
+                        print("Game ended")
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: 75, alignment: .topLeading)
                 VStack {
                     Text("Test Game").font(.title)
                     Text("3 letter words").font(.subheadline)
@@ -89,6 +94,7 @@ struct TestGameView: View {
             data.startTimer()
         }
         .environmentObject(data)
+        .navigationBarBackButtonHidden()
     }
 }
 
