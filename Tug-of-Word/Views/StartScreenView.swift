@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct StartScreenView: View {
+    @StateObject var settings = SettingsViewModel()
+    
     var body: some View {
         NavigationView {
             VStack {
                 Spacer()
                 Text("Tug-of-Word").font(.title).padding()
-                Text("Beta Version 1.0")
+                Text("Beta Version 1.1")
                 Spacer()
                 VStack {
                     NavigationLink(destination: AllGamesView()) {
@@ -26,6 +28,7 @@ struct StartScreenView: View {
                 Spacer()
             }.padding()
         }
+        .environmentObject(settings)
     }
 }
 

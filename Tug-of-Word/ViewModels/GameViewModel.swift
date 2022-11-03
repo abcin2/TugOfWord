@@ -71,7 +71,7 @@ class GameViewModel: ObservableObject {
             timeRemaining -= 1
         } else if sandboxMode == true {
             timerStopped = true
-        } else {
+        } else if timeRemaining == 0 {
             showLoseAlert = true
             timerStopped = true
         }
@@ -80,6 +80,7 @@ class GameViewModel: ObservableObject {
     func sandboxPlay() {
         showLoseAlert = false
         sandboxMode = true // this doesn't change anything atm, but it could eventually be used to display different winning screen
+        // currently it only has use for the timer
     }
     
     func reset() {
