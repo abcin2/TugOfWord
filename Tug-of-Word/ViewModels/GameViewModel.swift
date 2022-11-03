@@ -71,7 +71,7 @@ class GameViewModel: ObservableObject {
             timeRemaining -= 1
         } else if sandboxMode == true {
             timerStopped = true
-        } else {
+        } else if timeRemaining == 0 {
             showLoseAlert = true
             timerStopped = true
         }
