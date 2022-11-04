@@ -15,9 +15,15 @@ struct AllGamesView: View {
                 NavigationLink(destination: TestGameView(data: GameViewModel())) {
                     Text("Test Game")
                 }
-                Text("Timed")
-                Text("Infinite")
-                Text("Battle")
+                NavigationLink(destination: TestGameView(data: GameViewModel())) {
+                    Text("Timed")
+                }
+                NavigationLink(destination: TestGameView(data: GameViewModel())) {
+                    Text("Infinte")
+                }
+                NavigationLink(destination: TestGameView(data: GameViewModel())) {
+                    Text("Battle")
+                }.disabled(true)
             }
         }
     }
