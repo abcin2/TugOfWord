@@ -36,6 +36,8 @@ class GameViewModel: ObservableObject {
     
     @Published var showLoseAlert: Bool = false
     
+    @Published var showEndGameAlert: Bool = false
+    
     @Published var timerStopped: Bool = false
     
     @Published var timeRemaining = 30
@@ -44,8 +46,24 @@ class GameViewModel: ObservableObject {
     
     @Published var sandboxMode: Bool = false
     
+    func endGame() {
+        timerStopped = true
+        showEndGameAlert = true
+    }
+    
+    func endDeny() {
+        showEndGameAlert = false
+        timerStopped = false
+    }
+    
+    func endConfirm() {
+        // navigate back to AllGamesView
+        return
+    }
+    
     func nextWord() {
         
+        // probably a better way to write this function. Maybe switch satement??
         if counter < wordsInCurrentGame.count - 1 {
             if guessedWord.count == wordsInCurrentGame[counter].word.count {
                 if guessedWord.uppercased() == wordsInCurrentGame[counter + 1].word.uppercased() {
@@ -107,13 +125,13 @@ class GameViewModel: ObservableObject {
     
     func enterLetter(_ letter: String) {
         guessedWord += letter
-        print(guessedWord)
+        //print(guessedWord)
     }
     
     func removeLetter() {
         if guessedWord.count > 0 {
             guessedWord.removeLast()
-            print(guessedWord)
+            //print(guessedWord)
         }
     }
 

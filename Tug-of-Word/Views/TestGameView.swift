@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct TestGameView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject var data: GameViewModel = GameViewModel()
     @FocusState var textFieldInFocus: Bool
     
     var body: some View {
         VStack {
             HStack {
-                /// used for even spacing for header elements
-                VStack {}.frame(maxWidth: .infinity, alignment: .leading)
+                VStack {
+                    Button("End Game") {
+                        data.endGame()
+                    }
+                    .alert("Are you sure you would like to end this game?", isPresented: $data.showEndGameAlert) {
+                        Button("NO", role: .cancel) {
+                            data.endDeny()
+                        }
+                        Button("YES", role: .destructive) {
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: 75, alignment: .topLeading)
                 VStack {
                     Text("Test Game").font(.title)
                     Text("3 letter words").font(.subheadline)
@@ -89,6 +102,7 @@ struct TestGameView: View {
             data.startTimer()
         }
         .environmentObject(data)
+        .navigationBarBackButtonHidden()
     }
 }
 
