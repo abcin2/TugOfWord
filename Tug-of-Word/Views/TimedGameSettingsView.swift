@@ -9,7 +9,17 @@ import SwiftUI
 
 struct TimedGameSettingsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Customize Game")
+        Button("Use Defaults") {
+            print("sets everything back to default")
+        }
+        Button("Play!") {
+            print("print")
+        }
+        //MARK: what I need for game settings
+        ///1. time for game
+        ///2. number of letters
+        ///3.difficulty? -> would need to explain each difficulty level
     }
 }
 
