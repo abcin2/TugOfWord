@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3322EBF6291617DC008B8A30 /* TimedGameSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3322EBF5291617DC008B8A30 /* TimedGameSettingsView.swift */; };
 		333B385E2907FF6D00517184 /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B385D2907FF6D00517184 /* LetterButtonView.swift */; };
 		333B38602908369300517184 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B385F2908369300517184 /* KeyboardView.swift */; };
 		333B386329083D9800517184 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B386229083D9800517184 /* Global.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3322EBF5291617DC008B8A30 /* TimedGameSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedGameSettingsView.swift; sourceTree = "<group>"; };
 		333B385D2907FF6D00517184 /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		333B385F2908369300517184 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		333B386229083D9800517184 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				33B2FCA228CE46EE00CB447B /* StartScreenView.swift */,
 				33811BE228EDCE0E007582AF /* SettingsView.swift */,
 				33811BE428EDCE28007582AF /* AllGamesView.swift */,
+				3322EBF5291617DC008B8A30 /* TimedGameSettingsView.swift */,
 				333B385D2907FF6D00517184 /* LetterButtonView.swift */,
 				333B385F2908369300517184 /* KeyboardView.swift */,
 				33811BE628EE2CC9007582AF /* TestGameView.swift */,
@@ -333,6 +336,7 @@
 				33811BE528EDCE28007582AF /* AllGamesView.swift in Sources */,
 				33B2FC7928CE460A00CB447B /* Tug_of_WordApp.swift in Sources */,
 				33B2FCA328CE46EE00CB447B /* StartScreenView.swift in Sources */,
+				3322EBF6291617DC008B8A30 /* TimedGameSettingsView.swift in Sources */,
 				333B3868290AA00600517184 /* KeyboardThemeModel.swift in Sources */,
 				333B38662908CEA100517184 /* GameViewModel.swift in Sources */,
 				333B386329083D9800517184 /* Global.swift in Sources */,

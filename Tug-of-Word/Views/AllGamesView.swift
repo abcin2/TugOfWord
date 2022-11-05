@@ -15,7 +15,7 @@ struct AllGamesView: View {
                 NavigationLink(destination: TestGameView(data: GameViewModel())) {
                     Text("Test Game")
                 }
-                NavigationLink(destination: TestGameView(data: GameViewModel())) {
+                NavigationLink(destination: TimedGameSettingsView()) {
                     Text("Timed")
                 }
                 NavigationLink(destination: TestGameView(data: GameViewModel())) {
