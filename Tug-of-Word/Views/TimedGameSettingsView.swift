@@ -8,15 +8,46 @@
 import SwiftUI
 
 struct TimedGameSettingsView: View {
-    @ObservedObject var viewModel: TimedGameSetingsViewModel = TimedGameSetingsViewModel()
+    @StateObject private var viewModel = TimedGameSettingsViewModel()
     var body: some View {
         VStack {
-            TextField("", text: $viewModel.gameTime)
+            HStack {
+                Spacer()
+                Text("Game Time")
+                Spacer()
+                TextField("", text: $viewModel.gameMinutesAsString)
+                    .keyboardType(.numberPad)
+                    .frame(width: 50.0)
+                    .textFieldStyle(.roundedBorder)
+                    .textCase(.uppercase)
+                    .multilineTextAlignment(.center)
+                Text(":")
+                TextField("", text: $viewModel.gameSecondsAsString)
+                    .keyboardType(.numberPad)
+                    .frame(width: 50.0)
+                    .textFieldStyle(.roundedBorder)
+                    .textCase(.uppercase)
+                    .multilineTextAlignment(.center)
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                Text("Number of Letters")
+                Spacer()
+                TextField("", text: $viewModel.wordLength)
+                    .keyboardType(.numberPad)
+                    .frame(width: 25.0)
+                    .textFieldStyle(.roundedBorder)
+                    .textCase(.uppercase)
+                    .multilineTextAlignment(.center)
+                Spacer()
+            }
             Button("Use Defaults") {
-                print("sets everything back to default")
+                viewModel.useDefaults()
             }
             Button("Play!") {
                 print("print")
+                // will navigate to game view and pass all settings info to it
             }
             //MARK: what I need for game settings
             ///1. time for game
@@ -24,6 +55,7 @@ struct TimedGameSettingsView: View {
             ///3.difficulty? -> would need to explain each difficulty level
         }
         .navigationTitle("Game Settings")
+        .environmentObject(viewModel)
     }
 }
 

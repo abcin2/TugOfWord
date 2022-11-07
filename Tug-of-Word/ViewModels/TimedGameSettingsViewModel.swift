@@ -9,10 +9,11 @@ import SwiftUI
 
 extension TimedGameSettingsView {
     
-    class TimedGameSetingsViewModel: ObservableObject {
+    class TimedGameSettingsViewModel: ObservableObject {
         
-        @Published var gameTimeAsString: String = "30"
-        @Published var wordLength: Int = 3
+        @Published var gameMinutesAsString: String = "1"
+        @Published var gameSecondsAsString: String = "30"
+        @Published var wordLength: String = "3"
         
         // will be called on every change of the textfield
         func validateGameTimeAsInt(timeString: String) -> Int {
@@ -21,6 +22,12 @@ extension TimedGameSettingsView {
             }
             
             return 30
+        }
+        
+        func useDefaults() {
+            gameMinutesAsString = "1"
+            gameSecondsAsString = "30"
+            wordLength = "3"
         }
         
     }
