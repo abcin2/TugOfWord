@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3322EBF6291617DC008B8A30 /* TimedGameSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3322EBF5291617DC008B8A30 /* TimedGameSettingsView.swift */; };
+		3322EBFB2917F834008B8A30 /* TimedGameSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3322EBFA2917F834008B8A30 /* TimedGameSettingsViewModel.swift */; };
 		333B385E2907FF6D00517184 /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B385D2907FF6D00517184 /* LetterButtonView.swift */; };
 		333B38602908369300517184 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B385F2908369300517184 /* KeyboardView.swift */; };
 		333B386329083D9800517184 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B386229083D9800517184 /* Global.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		3322EBF5291617DC008B8A30 /* TimedGameSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedGameSettingsView.swift; sourceTree = "<group>"; };
+		3322EBFA2917F834008B8A30 /* TimedGameSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedGameSettingsViewModel.swift; sourceTree = "<group>"; };
 		333B385D2907FF6D00517184 /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		333B385F2908369300517184 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		333B386229083D9800517184 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -106,6 +108,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3322EBF72917F5BA008B8A30 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		333B385C2907FF5F00517184 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +143,7 @@
 			children = (
 				333B38652908CEA100517184 /* GameViewModel.swift */,
 				333B38692910247A00517184 /* SettingsViewModel.swift */,
+				3322EBFA2917F834008B8A30 /* TimedGameSettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -161,6 +171,7 @@
 		33B2FC7728CE460A00CB447B /* Tug-of-Word */ = {
 			isa = PBXGroup;
 			children = (
+				3322EBF72917F5BA008B8A30 /* Components */,
 				333B38642908CE8900517184 /* ViewModels */,
 				333B386129083D8600517184 /* Models */,
 				333B385C2907FF5F00517184 /* Views */,
@@ -332,6 +343,7 @@
 				333B38602908369300517184 /* KeyboardView.swift in Sources */,
 				33B2FC7B28CE460A00CB447B /* ContentView.swift in Sources */,
 				33811BE328EDCE0E007582AF /* SettingsView.swift in Sources */,
+				3322EBFB2917F834008B8A30 /* TimedGameSettingsViewModel.swift in Sources */,
 				33811BE728EE2CC9007582AF /* TestGameView.swift in Sources */,
 				33811BE528EDCE28007582AF /* AllGamesView.swift in Sources */,
 				33B2FC7928CE460A00CB447B /* Tug_of_WordApp.swift in Sources */,

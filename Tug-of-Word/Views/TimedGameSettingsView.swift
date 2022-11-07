@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct TimedGameSettingsView: View {
+    @ObservedObject var viewModel: TimedGameSetingsViewModel = TimedGameSetingsViewModel()
     var body: some View {
-        Text("Customize Game")
-        Button("Use Defaults") {
-            print("sets everything back to default")
+        VStack {
+            TextField("", text: $viewModel.gameTime)
+            Button("Use Defaults") {
+                print("sets everything back to default")
+            }
+            Button("Play!") {
+                print("print")
+            }
+            //MARK: what I need for game settings
+            ///1. time for game
+            ///2. number of letters
+            ///3.difficulty? -> would need to explain each difficulty level
         }
-        Button("Play!") {
-            print("print")
-        }
-        //MARK: what I need for game settings
-        ///1. time for game
-        ///2. number of letters
-        ///3.difficulty? -> would need to explain each difficulty level
+        .navigationTitle("Game Settings")
     }
 }
 
